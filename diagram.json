@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "author": "Mateus Alencar Ferreira",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {
+        "builder": "pico-sdk"
+      }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": -8,
+      "left": 100,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "pico:GP0",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "pico:GP1",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "pico:GND.8",
+      "servo1:GND",
+      "#8f4814",
+      [
+        "h13.46",
+        "v9.95"
+      ]
+    ],
+    [
+      "pico:3V3",
+      "servo1:V+",
+      "red",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "pico:GP22",
+      "servo1:PWM",
+      "orange",
+      [
+        "h13.46",
+        "v-57.45"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
